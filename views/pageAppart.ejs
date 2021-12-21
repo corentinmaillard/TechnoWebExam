@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Appart</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <h1>liste des pièces de l'appartement</h1>
+        <table class ='t1'>
+            <% let aireTot = 0 %> 
+            <% for (let i = 0 ; i < chamber.length ; i++) { %>
+                <tr>
+                    <th>Pièce :<%= " "+chamber[i].name+" " %><%= chamber[i].length*chamber[i].width+" " %> m2</th>
+                </tr>
+                <% aireTot += chamber[i].length*chamber[i].width %> 
+                
+            <% } %>
+            <tr>
+                <td>Surface totale :<%= " "+aireTot+" " %> m2</td>
+            </tr>
+        </table>
+        <a herf="/"><input type="submit" value="Encoder une autre pièce" class="inp2"></a>
+    </body>
+</html>
